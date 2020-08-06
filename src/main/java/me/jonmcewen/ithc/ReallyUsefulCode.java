@@ -5,10 +5,14 @@ import java.util.stream.IntStream;
 
 public class ReallyUsefulCode {
 
-  public static String doStuff(String string) {
-    return IntStream.range(0, string.length())
+  public static String decryptSecretMessage(String encryptedMessage) {
+    return everyOtherCharacterOf(encryptedMessage);
+  }
+
+  private static String everyOtherCharacterOf(String encryptedMessage) {
+    return IntStream.range(0, encryptedMessage.length())
         .filter(n -> n % 2 == 0)
-        .mapToObj(string::charAt)
+        .mapToObj(encryptedMessage::charAt)
         .collect(
             Collector.of(
                 StringBuilder::new,

@@ -1,6 +1,6 @@
 package me.jonmcewen.ithc;
 
-import static me.jonmcewen.ithc.ReallyUsefulCode.doStuff;
+import static me.jonmcewen.ithc.ReallyUsefulCode.decryptSecretMessage;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -8,7 +8,7 @@ import org.junit.Test;
 public class ReallyUsefulCodeTest {
 
   @Test
-  public void testDoStuff() {
-    assertEquals("secret message", doStuff("sXe6cir£ertr Mm2eSsssra6g8e"));
+  public void shouldDecryptSecretMessage() {
+    assertEquals("secret message", decryptSecretMessage("sXe6cir£ertr Mm2eSsssra6g8e"));
   }
 }
